@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Index</h1>
+<form class="form-group" action='' method="POST">
+  {% csrf_token %}
+  <div class="col-auto mb-3">
+  <label class="mr-2" for="people">인원 수</label>
+  <input type="number" id="people" name="people" min='2' max='6' required/>
+  </div>
+  <div class='col-auto'>
+  <button class="btn btn-dark">출발지 입력하기</button>
+  </div>
+</form>
+
+{% endblock %}
